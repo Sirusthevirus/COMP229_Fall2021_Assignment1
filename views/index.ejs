@@ -1,13 +1,36 @@
+<!--FileName: "index.ejs"
+//Name: "Ashley Turnbull"
+//Student ID: 301190323
+//Date: 2021-10-03
+//Index Section -->
+
+
 <%- include partials/header.ejs %>
 
 <%- include partials/main_nav.ejs %>
 
   <!--Main Content-->
-  <main class="container">
+  <main class="container" style="background-color:hsla(240, 68%, 83%, 0.185); padding-bottom: 50px;">
     <div class="jumbotron">
-      <h1 class="display-4">Welcome to the <%- title%> page</h1>
+      <h1 style="font-family: Garamond, serif;" class="display-4">Welcome to the <%- title%> page</h1>
+      <hr>
     </div>
-  </main>
+
+    <% if (title == "Home") { %>
+      <%- include partials/homepage_card.ejs %>
+    <% } else if (title == "About") { %>    
+      <%- include partials/about.ejs %>
+    <% } else if (title == "Products") { %>
+      <%- include partials/products.ejs %>
+    <% } else if (title == "Services") { %>
+      <%- include partials/services.ejs %>
+    <% } else if (title == "Contact Us") { %>
+      <%- include partials/contact.ejs %>
+    <% } %><!--This is the end of the statement dont remove-->
+
+</main>
+
+
 
 <%- include partials/bottom_nav.ejs %>
 
