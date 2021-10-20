@@ -1,6 +1,6 @@
 {
-  "name": "assignment-1",
-  "version": "0.0.1",
+  "name": "assign1week4onwards-mongoose",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "node ./server.js"
@@ -18,11 +18,13 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jquery": "^3.6.0",
+    "mongoose": "^6.0.11",
     "morgan": "~1.9.1",
+    "nodemon": "^2.0.13",
     "popper.js": "^1.16.1"
   },
   "description": "Assignment 1 Express Site",
-  "main": "index.js",
+  "main": "routes/index.js",
   "devDependencies": {},
   "repository": {
     "type": "git",
