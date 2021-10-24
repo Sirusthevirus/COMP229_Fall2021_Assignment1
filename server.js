@@ -10,7 +10,7 @@
 //Student ID: 301190323
 //Date: 2021-10-03
 
-var app = require('./config/app');
+var app = require('./server/config/app');
 var debug = require('debug')('assignment-1:server');
 var http = require('http');
 
