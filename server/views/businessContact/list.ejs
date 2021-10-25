@@ -25,19 +25,15 @@
                 <!-- Header Row-->
                 <tr class="d-flex">
                     <% if(typeof displayName == 'string' && displayName) { %>
-                        <th class="text-center col-2">Contact Name</th>
-                        <th class="text-center col-2">Contact Number</th>
-                        <th class="text-center col-2">Contact Email</th>
-                        <th class="text-center col-2">Business Name</th>
-                        <th class="text-center col-2">Business Type</th>
+                        <th class="text-center col-3">Contact Name</th>
+                        <th class="text-center col-3">Contact Number</th>
+                        <th class="text-center col-4">Contact Email</th>
                         <th class="text-center col-1"></th>
                         <th class="text-center col-1"></th>
                     <% } else { %>
-                        <th class="text-center col-2">Contact Name</th>
-                        <th class="text-center col-2">Contact Number</th>
-                        <th class="text-center col-2">Contact Email</th>
-                        <th class="text-center col-3">Business Name</th>
-                        <th class="text-center col-3">Business Type</th>
+                        <th class="text-center col-4">Contact Name</th>
+                        <th class="text-center col-4">Contact Number</th>
+                        <th class="text-center col-4">Contact Email</th>
                     <% } %>
                 </tr>
 
@@ -46,11 +42,9 @@
                 <% for(let count = 0; count < ContactList.length; count++) { %>
                     <tr class="d-flex">
                         <% if(typeof displayName == 'string' && displayName) { %>
-                            <td class="text-center col-2"><%= ContactList[count].contactName %></td>
-                            <td class="text-center col-2"><%= ContactList[count].contactNumber %></td>
-                            <td class="text-center col-2"><%= ContactList[count].contactEmail %></td>
-                            <td class="text-center col-2"><%= ContactList[count].businessName %></td>
-                            <td class="text-center col-2"><%= ContactList[count].businessType %></td>
+                            <td class="text-center col-3"><%= ContactList[count].contactName %></td>
+                            <td class="text-center col-3"><%= ContactList[count].contactNumber %></td>
+                            <td class="text-center col-4"><%= ContactList[count].contactEmail %></td>
                             <td class="text-center col-1">
                                 <a href="/contact-list/edit/<%= ContactList[count]._id %>" class="btn btn-primary btn-sm">
                                 <i class="fas fa-pencil-alt"></i>Edit</a>
@@ -60,11 +54,9 @@
                             <i class="fas fa-trash-alt"></i>Delete</a>
                             </td>
                         <% } else { %>
-                            <td class="text-center col-2"><%= ContactList[count].contactName %></td>
-                            <td class="text-center col-2"><%= ContactList[count].contactNumber %></td>
-                            <td class="text-center col-2"><%= ContactList[count].contactEmail %></td>
-                            <td class="text-center col-3"><%= ContactList[count].businessName %></td>
-                            <td class="text-center col-3"><%= ContactList[count].businessType %></td>
+                            <td class="text-center col-4"><%= ContactList[count].contactName %></td>
+                            <td class="text-center col-4"><%= ContactList[count].contactNumber %></td>
+                            <td class="text-center col-4"><%= ContactList[count].contactEmail %></td>
                         <% } %>
                     </tr>
                 <% } %>
