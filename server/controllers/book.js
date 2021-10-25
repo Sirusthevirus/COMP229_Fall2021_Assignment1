@@ -15,7 +15,9 @@ module.exports.displayBookList = (req, res, next) => {
         {
             //console.log(BookList);
 
-            res.render('book/list', {title: 'Books', BookList: bookList});      
+            res.render('book/list', {title: 'Books',
+             BookList: bookList,
+             displayName: req.user ? req.user.displayName : ''});      
         }
     });
 }
@@ -60,7 +62,8 @@ module.exports.displayEditPage = (req, res, next) => {
         else
         {
             //show the edit view
-            res.render('book/edit', {title: 'Edit Book', book: bookToEdit})
+            res.render('book/edit', {title: 'Edit Book', book: bookToEdit,
+            displayName: req.user ? req.user.displayName : ''});      
         }
     });
 }
